@@ -102,7 +102,7 @@ def main():
             st.write(f"**End Coordinates**: {end_coords}")
 
             # Get graph and find routes
-            graph = ox.graph_from_point(start_coords, dist=15000, network_type="drive")
+            graph = ox.graph_from_point(start_coords, dist=5000, network_type="drive")
             all_routes, best_route = find_best_route(graph, start_coords, end_coords, api_key)
 
             # Plot routes on the map
